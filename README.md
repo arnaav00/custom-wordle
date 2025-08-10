@@ -110,7 +110,7 @@ The sequence diagram depicts the interactions between the user interface, game l
 ---
 
 ## Screenshots
-Below are sample in-game screenshots showing the game interface, feedback tiles, and pop-up results.\
+Below are sample in-game screenshots showing the game interface, feedback tiles, and pop-up results.
 
 ![Screenshot 1](screenshots/screenshot1.png)  
 ![Screenshot 2](screenshots/screenshot2.png) 
