@@ -1,7 +1,7 @@
 # Manipal-Themed Wordle
 
 ## Project Information
-**Lab:** Internet Tool and Technology Lab  
+**Lab:** Internet Tools & Technology Lab  
 **Semester:** VI Sem B.Tech  
 
 **Team Members:**  
