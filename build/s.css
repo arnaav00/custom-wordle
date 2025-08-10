@@ -1,0 +1,82 @@
+* {
+    color: #ffffff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+  background-color: #121213; 
+}
+
+h1 {
+ text-align: center;
+}
+
+.title-container{
+    border-bottom: solid 1px #3a3a3c;
+}
+
+#game-board {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.letter-box {
+  border: 2px solid #3a3a3c;
+  border-radius: 3px;
+  margin: 2px;
+  font-size: 2rem;
+  font-weight: 700;
+  height: 3.3rem;
+  width: 3.3rem;
+  display: flex;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+
+.filled-box {
+    border: 2px solid #3a3a3c;
+}
+
+.letter-row {
+  display: flex;
+}
+
+#keyboard-cont {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#keyboard-cont div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.second-row {
+  margin: 0.5rem 0;
+}
+
+.keyboard-button {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  width: 43px;
+  height: 58px;
+  margin: 0 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #818384;
+  border-radius: 4px;
+  border:none;
+}
+
+/*.keyboard-button:nth-child(20),
+.keyboard-button:nth-child(28){
+    width: 100px;
+}*/

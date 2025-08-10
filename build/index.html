@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipal Wordle</title>
+    <link rel="stylesheet" href="s.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/a9af65b6f5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" type="text/css" href="modal.css">
+    <link rel="stylesheet" type="text/css" href="rules.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <style>
+    .btn {
+      background-color: #121213;
+      border: none;
+      color: white;
+      font-size: 26px;
+      cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="title-container">
+        <h1> <button id="myBtn2" class="btn" style="position:absolute; top: 25px; left: 50px;" >
+            <i class="fa-solid fa-circle-question" onclick="openModal('myRules')"></i></button>
+            Manipal Wordle 
+            <button class="btn" id="block-this" style="position: absolute; top: 25px; right: 50px;" >
+            <i class="fa-solid fa-chart-simple" onclick="openModal('myModal')"></i></button> </h1>
+    </div>
+
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+      <center>
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close" onclick="closeModal('myModal')">&times;</span>
+            <h2>Congratulations!</h2>
+          </div>
+          <div class="modal-body">
+          <img id="place-image" src=""  width="250" height="250">
+            <p style="color: black;" id="guesses"></p>
+            <p style="color: black;" id="timetaken"></p>
+          </div>
+        </div>
+      </center> 
+    </div>
+      
+    <div id="myRules" class="modal">
+        <center>
+        <!-- Rules content -->
+        <div class="modal-header">
+            <span class="close" onclick="closeModal('myRules')">&times;</span>
+            <h2>How To Play</h2>
+          </div>
+          <div class="modal-body">
+            <img src="rulesheet1.png"  width="500" height="500">
+          </div>
+        </center> 
+    </div>
+    
+    
+	<br><br><br>
+    <div id="game-board">
+
+    </div>
+
+    <br><br>
+    <div id="keyboard-cont">
+        <div class="first-row">
+            <button class="keyboard-button">q</button>
+            <button class="keyboard-button">w</button>
+            <button class="keyboard-button">e</button>
+            <button class="keyboard-button">r</button>
+            <button class="keyboard-button">t</button>
+            <button class="keyboard-button">y</button>
+            <button class="keyboard-button">u</button>
+            <button class="keyboard-button">i</button>
+            <button class="keyboard-button">o</button>
+            <button class="keyboard-button">p</button>
+        </div>
+        <div class="second-row">
+            <button class="keyboard-button">a</button>
+            <button class="keyboard-button">s</button>
+            <button class="keyboard-button">d</button>
+            <button class="keyboard-button">f</button>
+            <button class="keyboard-button">g</button>
+            <button class="keyboard-button">h</button>
+            <button class="keyboard-button">j</button>
+            <button class="keyboard-button">k</button>
+            <button class="keyboard-button">l</button>
+        </div>
+        <div class="third-row">
+            <button class="keyboard-button">Del</button>
+            <button class="keyboard-button">z</button>
+            <button class="keyboard-button">x</button>
+            <button class="keyboard-button">c</button>
+            <button class="keyboard-button">v</button>
+            <button class="keyboard-button">b</button>
+            <button class="keyboard-button">n</button>
+            <button class="keyboard-button">m</button>
+            <button class="keyboard-button">ok</button>
+        </div>
+    </div>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+  const openModal = (id) => {
+    if(document.querySelector("#guesses").innerHTML === "") {
+      return
+    }
+    let modal = document.getElementById(id);
+    modal.style.display = "block";
+  }
+  const closeModal = (id) => {
+    let modal = document.getElementById(id);
+    modal.style.display = "none";
+  }
+</script>
+<!-- <script type="text/javascript" src="modal.js" defer></script> -->
+<!-- <script type="text/javascript" src="rules.js" defer></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="script.js" type="module"></script>
+</body>
+</html>
